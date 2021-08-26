@@ -72,6 +72,12 @@ PODS:
     - FlipperKit/FlipperKitNetworkPlugin
   - fmt (6.2.1)
   - glog (0.3.5)
+  - GzipSwift (5.1.1)
+  - instana_react-native-agent (1.5.6):
+    - InstanaAgent (= 1.1.18)
+    - React
+  - InstanaAgent (1.1.18):
+    - GzipSwift
   - libevent (2.1.12)
   - OpenSSL-Universal (1.1.180)
   - RCT-Folly (2021.04.26.00):
@@ -363,6 +369,7 @@ DEPENDENCIES:
   - FlipperKit/FlipperKitUserDefaultsPlugin (= 0.93.0)
   - FlipperKit/SKIOSNetworkPlugin (= 0.93.0)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - "instana_react-native-agent (from `../node_modules/@instana/react-native-agent`)"
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
@@ -404,6 +411,8 @@ SPEC REPOS:
     - Flipper-RSocket
     - FlipperKit
     - fmt
+    - GzipSwift
+    - InstanaAgent
     - libevent
     - OpenSSL-Universal
     - YogaKit
@@ -417,6 +426,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/React/FBReactNativeSpec"
   glog:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
+  instana_react-native-agent:
+    :path: "../node_modules/@instana/react-native-agent"
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
   RCTRequired:
@@ -483,6 +494,9 @@ SPEC CHECKSUMS:
   FlipperKit: aec2d931adeee48a07bab1ea8bcc8a6bb87dfce4
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 5337263514dd6f09803962437687240c5dc39aa4
+  GzipSwift: 893f3e48e597a1a4f62fafcb6514220fcf8287fa
+  instana_react-native-agent: c13c0ff0924642b7a460194362e7896ec5bafd6e
+  InstanaAgent: 21f1fbb31842c77301e7a3adfd687d10bace31ce
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: 1aa4f6a6ee7256b83db99ec1ccdaa80d10f9af9b
   RCT-Folly: 0dd9e1eb86348ecab5ba76f910b56f4b5fef3c46
@@ -513,4 +527,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 30ae42889a525829cfd7c63a7b174f561f651111
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.10.1

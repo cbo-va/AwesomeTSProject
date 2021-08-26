@@ -4,16 +4,20 @@ buildscript {
     ext {
         buildToolsVersion = "30.0.2"
         minSdkVersion = 21
+        ndkVersion = "20.1.5948944"
         compileSdkVersion = 30
         targetSdkVersion = 30
-        ndkVersion = "20.1.5948944"
     }
     repositories {
         google()
+        jcenter()
+        // You need to add Maven Central
         mavenCentral()
+        mavenLocal()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:4.2.1")
+        classpath("com.android.tools.build:gradle:4.1.0")
+
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -21,7 +25,6 @@ buildscript {
 
 allprojects {
     repositories {
-        mavenCentral()
         mavenLocal()
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
@@ -33,6 +36,9 @@ allprojects {
         }
 
         google()
-        maven { url 'https://www.jitpack.io' }
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        // You need to add Maven Central
+        mavenCentral()
     }
 }
